@@ -1,0 +1,18 @@
+{
+  "name": "nodejs-inventory-api",
+  "version": "1.0.0",
+  "description": "inventory api for redux saga frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Arttu Pekkarinen",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.0.10",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "yamljs": "^0.2.10"
+  }
+}
