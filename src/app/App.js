@@ -13,8 +13,9 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import Home from './home/Home';
 import InventoryList from './inventory/InventoryContainer';
+import ItemsList from './inventory/ItemsContainer';
 
-export default class Root extends Component {
+export default class App extends Component {
   
   render() {
     const { store, history } = this.props;
@@ -27,7 +28,8 @@ export default class Root extends Component {
             <Header></Header>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/inventory" component={InventoryList} />
+              <Route exact path="/inventory" component={InventoryList} />
+              <Route exact path="/inventory/:id" component={ItemsList} />
             </Switch>
             <Footer></Footer>
           </MuiThemeProvider>

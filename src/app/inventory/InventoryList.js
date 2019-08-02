@@ -3,14 +3,14 @@ import React from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Container from '@material-ui/core/Container';
 
-import ButtonBase from '@material-ui/core/ButtonBase';
+import { Link } from 'react-router-dom';
+
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import Whatshot from '@material-ui/icons/Whatshot';
 
 import { withStyles } from '@material-ui/styles';
-import { makeStyles } from '@material-ui/core/styles';
 
 const styles = {
   inventoryList: {
@@ -34,6 +34,9 @@ const styles = {
   progress: {
     marginTop: '40%',
     marginLeft: '50%'
+  },
+  inventoryLink: {
+    textDecoration: 'none',
   }
 };
 
@@ -63,12 +66,12 @@ class InventoryList extends React.Component {
           </Typography>
           <Grid container>
             {this.props.inventory.map(inv => (
-              <ButtonBase focusRipple key={inv.id} onClick={this.props.getItems}>
+              <Link key={inv.id} to={`inventory/${inv.id}`} className={this.props.classes.inventoryLink} variant="inherit" color="inherit" underline="none">
                 <Box className={this.props.classes.inventoryBox} boxShadow={1} key={inv.id} p={3} m={2}>      
                   <Whatshot className={this.props.classes.inventoryIcon} color="secondary"></Whatshot>
                   <Typography align="center" color="secondary">{inv.name}</Typography>
                 </Box>
-              </ButtonBase>
+              </Link>
             ))}
           </Grid>
         </Container> 

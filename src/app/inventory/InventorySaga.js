@@ -2,11 +2,11 @@ import { takeLatest, all, put } from 'redux-saga/effects'
 import fetch from 'isomorphic-fetch';
 import InventoryTypes from './InventoryTypes';
 
-function* fetchItems(id) {
-    const response = yield fetch(`http://localhost:8081/inventory/${id}`);
-    const items = yield response.json();
-    yield put({ type: InventoryTypes.READ_ITEMS_SUCCEEDED, items });
-    return;
+function* fetchItems({id}) {
+  const response = yield fetch(`http://localhost:8081/inventory/${id}`);
+  const items = yield response.json();
+  yield put({ type: InventoryTypes.READ_ITEMS_SUCCEEDED, items });
+  return;
 }
 
 function* fetchInventory() {

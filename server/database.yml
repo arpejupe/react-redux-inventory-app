@@ -33,17 +33,33 @@ items:
   stock: 4
   total: 10
 
-- id: II75404
+- id: II22130
   inventory: A429
   name: Bar
+  status: on-hold
+  price: 60
+  stock: 2
+  total: 10
+
+- id: II73495
+  inventory: A429
+  name: Baz
   status: in-progress
   price: 35
   stock: 44
   total: 50
 
+- id: II63994
+  inventory: A429
+  name: Qux
+  status: on-hold
+  price: 33
+  stock: 34
+  total: 58
+
 - id: II35029
   inventory: A342
-  name: Baz
+  name: Omn
   status: on-hold
   price: 5
   stock: 1
@@ -51,7 +67,7 @@ items:
 
 - id: II12500
   inventory: A342
-  name: Qux
+  name: Nom
   status: in-progress
   price: 27
   stock: 40
@@ -59,7 +75,7 @@ items:
 
 - id: II21004
   inventory: A342
-  name: Omn
+  name: Hum
   status: on-hold
   price: 21
   stock: 4
@@ -67,7 +83,7 @@ items:
 
 - id: II63049
   inventory: A429
-  name: Nom
+  name: Vim
   status: in-progress
   price: 10
   stock: 7
