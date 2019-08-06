@@ -1,14 +1,14 @@
 import initialState from '../State'
-import InventoryTypes from './InventoryTypes';
+import ItemsTypes from './ItemsTypes';
 
 const ItemsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case InventoryTypes.READ_ITEMS_PENDING:
+    case ItemsTypes.READ_ITEMS_PENDING:
       return { 
         ...state,
         loading: true,
       };
-    case InventoryTypes.READ_ITEMS_SUCCEEDED:
+    case ItemsTypes.READ_ITEMS_SUCCEEDED:
       return Object.assign({}, state, {
         items: action.items,
         loading: false

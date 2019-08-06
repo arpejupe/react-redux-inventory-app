@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import ItemsReducer from './inventory/ItemsReducer';
+import ItemsReducer from './items/ItemsReducer';
 import InventoryReducer from './inventory/InventoryReducer';
 import { connectRouter } from 'connected-react-router'
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Container from '@material-ui/core/Container';
@@ -10,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import Whatshot from '@material-ui/icons/Whatshot';
 
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   inventoryList: {
@@ -43,7 +44,7 @@ const styles = {
 class InventoryList extends React.Component {
   
   componentDidMount() {
-    this.props.fetchInventory();
+    this.props.actions.fetchInventory();
   }
 
   render() {
@@ -81,3 +82,8 @@ class InventoryList extends React.Component {
 }
 
 export default withStyles(styles)(InventoryList);
+
+InventoryList.propTypes = {
+  inventory: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired
+};

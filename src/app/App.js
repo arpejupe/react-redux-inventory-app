@@ -13,7 +13,7 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import Home from './home/Home';
 import InventoryList from './inventory/InventoryContainer';
-import ItemsList from './inventory/ItemsContainer';
+import ItemsList from './items/ItemsContainer';
 
 export default class App extends Component {
   

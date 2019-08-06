@@ -1,7 +1,9 @@
 import InventorySaga from './inventory/InventorySaga';
+import ItemsSaga from './items/ItemsSaga';
 
 const sagas = {
   InventorySaga,
+  ItemsSaga
 };
 
 export function registerWithMiddleware(sagaMiddleware) {

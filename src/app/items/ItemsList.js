@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Container from '@material-ui/core/Container';
@@ -20,7 +21,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   itemsContainer: {
@@ -30,7 +31,7 @@ const styles = theme => ({
     marginTop: '1.5em'
   },
   headerStatus: {
-    padding: theme.spacing(2, 2),
+    padding: '20px 20px',
     borderLeft: '5px solid',
     borderColor: theme.palette.primary.main,
     boxShadow: 'none',
@@ -104,7 +105,7 @@ const styles = theme => ({
   }
 });
 
-class Items extends React.Component {
+class ItemsList extends React.Component {
   
   constructor(props) {
     super(props);
@@ -394,4 +395,9 @@ class Items extends React.Component {
   }
 }
 
-export default withStyles(styles)(Items);
+export default withStyles(styles)(ItemsList);
+
+ItemsList.propTypes = {
+  items: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired
+};

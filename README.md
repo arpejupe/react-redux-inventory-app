@@ -30,7 +30,7 @@ Includes:
 
 ## Folder Structure
 
-This boilerplate is based on feature-first approach as following:
+This boilerplate is based on feature-first approach and is similar to 'ducks' principle:
 
 ```
 .
@@ -45,6 +45,7 @@ This boilerplate is based on feature-first approach as following:
 |   |   +-- Sagas.js        // root saga that collects all sagas and runs them
 |   |   +-- State.js        // defines initial state for store
 |   |   +-- Store.js        // initializes and configures store and registers all middleware
+|   +-- /services           // service classes such as api
 |   +-- /styles             // customized material ui theme and sass
 |   +-- /utils              // Utility classes and helper functions
 |   +-- index.js        

@@ -1,6 +1,6 @@
 import { bindActionCreators, } from 'redux';
 import { connect } from 'react-redux'
-import { fetchItems } from './InventoryActions';
+import { fetchItems } from './ItemsActions';
 import ItemsList from './ItemsList';
 
 const mapStateToProps = (state) => {

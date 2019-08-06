@@ -1,6 +1,6 @@
 import { bindActionCreators, } from 'redux';
 import { connect } from 'react-redux'
-import { fetchInventory } from './InventoryActions';
+import * as actions from './InventoryActions';
 import InventoryList from './InventoryList';
 
 const mapStateToProps = (state) => {
@@ -10,9 +10,9 @@ const mapStateToProps = (state) => {
     };
 };
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ 
-        fetchInventory: fetchInventory
-    }, dispatch);
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
 };
 
 export default connect(
