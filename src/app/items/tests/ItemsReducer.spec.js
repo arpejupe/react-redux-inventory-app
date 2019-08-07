@@ -12,7 +12,7 @@ describe('ItemsReducer', () => {
 
   const getAppState = () => {
     return {
-      items: [],
+      inventory: [],
       loading: false,
       items: [
         {
