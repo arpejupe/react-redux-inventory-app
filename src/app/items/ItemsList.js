@@ -111,7 +111,7 @@ class ItemsList extends React.Component {
     super(props);
     this.state = {
       localItems: [],
-      sortValue: null
+      sortValue: ''
     };
   }
 
@@ -278,7 +278,6 @@ class ItemsList extends React.Component {
                 className={this.props.classes.textField}
                 value={this.state.sortValue}
                 onChange={(event) => this.handleSortOnChange(event)}
-                isClearable={true}
                 placeholder=''
                 SelectProps={{
                   MenuProps: {
@@ -287,8 +286,8 @@ class ItemsList extends React.Component {
                 }}
                 margin="normal"
               >
-                {sortOptions.map(option => (
-                  <MenuItem key={option.value} value={option.label}>
+                {sortOptions.map((option, index) => (
+                  <MenuItem key={index} value={option.label}>
                     {option.label}
                   </MenuItem>
                 ))}
